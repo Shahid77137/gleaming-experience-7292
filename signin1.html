@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .cont{
+         width: 400px;
+         height: 350px;
+         margin-top: 220px;
+         margin-left: 570px;
+         border-radius: 20px;
+         box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+         border: 1px solid white;
+         text-align: center;
+         /* height: 100vh; */
+      /* } */
+      /* .cont>#btn{
+        width: 175px;
+        height: 30px;
+        border-radius: 20px;
+        background-color: aqua;
+      } */ 
+
+      .cont{
+         width: 400px;
+         height:350px;
+         margin-top: 100px;
+         margin-left: 540px;
+         border-radius: 20px;
+         box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+         border: 1px solid white;
+         text-align: center;
+         /* height: 100vh; */
+      }
+      .cont>#btn{
+        width: 300px;
+        height: 35px;
+        /* border-radius: 20px; */
+        background-color: rgb(177, 18, 18);
+        color: white;
+        font-weight:bold;
+        font-size: 20px;
+        border: 1px solid white;
+      }
+      .bigg{
+        width:300px;
+        height:25px;
+        text-align: center;
+        
+      }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <h1>SIGN IN</h1>
+        <label> Registered Email Address</label><br>
+        <input class="bigg" type="text" id="emai" placeholder="Enter Registered Email"><br><br>
+        <label>Registered Password</label><br>
+        <input class="bigg" type="pass" id="pass" placeholder="Enter Registered Password(atleast 8 characters)"><br><br>
+        <button id="btn">Log In</button>
+        <p>Don't have an account?<a style="color: red;" href="signup1.html">Create one now!</a></p>
+        <h2></h2>
+    </div>
+</body>
+
+</html>
+<script>
+    document.querySelector("button").addEventListener("click", fun);
+
+    let array = JSON.parse(localStorage.getItem("cart"));
+    function fun() {
+        let email = document.querySelector("#emai").value;
+        console.log(email);
+        let password = document.querySelector("#pass").value;
+        console.log(password);
+        for (let i = 0; i < array.length; i++) {
+            if (JSON.parse(localStorage.getItem("cart"))[i].email == email && JSON.parse(localStorage.getItem("cart"))[i].password == password) {
+             
+                alert("SUCCESSFULLY LOGGED IN");
+                break;
+            } else {
+                alert("Wrong Credentials");
+                break;
+            
+            }
+        }
+    }
+</script>
