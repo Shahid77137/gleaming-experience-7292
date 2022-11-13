@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Form</title>
+    <style>
+      /* Write all necessery css here  */
+      body{
+        display: flex;
+        justify-content: center;
+      
+      }
+      .login{
+        display: flex;
+        border: 0px solid green;
+        width:900px;
+        justify-content: space-around;
+        height: auto;
+        margin-top: 12%;
+        
+      }
+      .bag{
+        width: 177px;
+      }
+      .login>div{
+        text-align: center;
+        border: 0px solid red;
+        width: 40%;
+        height: 95%;
+        margin-top: 5px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="login">
+      <div>
+        <h1>Register New Account</h1>
+        <!-- Create the Signup form here  -->
+        <form id="one" >
+            <label for="">Name</label><br>
+            <input id="name" type="text" placeholder="Enter name"><br><br>
+            <label for="">Email Address</label><br>
+            <input  id="mail" type="email" placeholder="Enter email address"><br><br>
+            <label for="">Mobile no.</label><br>
+            <input id="num" type="number"placeholder="Enter mobile number"><br><br>
+            <label for="">Password</label><br>
+            <input id="pass" type="text"placeholder="Enter password"><br><br>
+            <label for=""> Confirm Password</label><br>
+            <input id="con" type="text"placeholder="Enter password"><br><br>
+            <button id="bag"></button>
+    
+            <p>Already Registered?  LOGIN</p>
+    
+        </form>
+        
+
+    </div>
+    <div>
+      <h1>Login Your Account</h1>
+      <!-- Create the Signin Form Here  -->
+      <form id="two">
+        <label for="">Name</label><br>
+        <input type="text" placeholder="Enter name"><br><br>
+        <label for="">Email Address</label><br>
+        <input type="text" placeholder="Enter email address"><br><br>
+        <label for="">Mobile no.</label><br>
+        <input type="number"placeholder="Enter mobile number"><br><br>
+        <label for="">Password</label><br>
+        <input type="text"placeholder="Enter password"><br><br>
+       
+        <input class="bag" type="submit" value="Login"><br><br>
+      </form>
+     
+    </div>
+    </div>
+  </body>
+</html>
+<script src="signup.js"></script>
